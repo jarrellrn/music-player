@@ -7,3 +7,19 @@ const progress = document.querySelector(".progress");
 const progressContainer = document.querySelector(".progress-container");
 const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
+
+// Song titles
+const songs = ["Darius - c'est difficile", "Intervals - Fable", "RQ - One Horn"];
+
+// Keep track of songs
+let songIndex = 1;
+
+// Initially load song into DOM
+loadSong(songs[songIndex]);
+
+// Update song details
+function loadSong(song) {
+  title.innerText = song
+  audio.src = `music/${song}.mp3`
+  cover.src = `images/${song}.png`
+};
