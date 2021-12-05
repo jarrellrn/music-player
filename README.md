@@ -18,7 +18,7 @@ This is a simple music player that I made using vanilla JS, HTML, and CSS to hel
 
 ### How to use: <a name="use"></a>
 
-Simply open the file in the browser of your choice.
+Simply open the file in the browser of your choice, or view it online [here](https://jarrellrn.github.io/music-player/).
 
 ### License: <a name="license"></a>
 
