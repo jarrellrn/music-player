@@ -40,6 +40,14 @@ function pauseSong() {
   audio.pause()
 }
 
+function prevSong() {
+
+}
+
+function nextSong() {
+  
+}
+
 
 // Event listeners
 playBtn.addEventListener("click", () => {
@@ -51,3 +59,7 @@ playBtn.addEventListener("click", () => {
     playSong()
   }
 });
+
+// Change song events
+prevBtn.addEventListener("click", prevSong);
+nextBtn.addEventListener("click", nextSong);
