@@ -12,7 +12,7 @@ const cover = document.querySelector("#cover");
 const songs = ["Darius - c'est difficile", "Intervals - Fable", "RQ - One Horn"];
 
 // Keep track of songs
-let songIndex = 1;
+let songIndex = 0;
 
 // Initially load song into DOM
 loadSong(songs[songIndex]);
@@ -70,6 +70,14 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`
 }
 
+function setProgress(e) {
+  const width = this.clientWidth
+  const clickX = e.offsetX
+  const duration = audio.duration
+
+  audio.currentTime = (clickX / width) * duration
+}
+
 
 // Event listeners
 playBtn.addEventListener("click", () => {
@@ -86,4 +94,6 @@ playBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 
-audio.addEventListener("timeupdate", updateProgress)
+audio.addEventListener("timeupdate", updateProgress);
+
+progressContainer.addEventListener("click", setProgress);
