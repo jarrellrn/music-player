@@ -12,7 +12,7 @@ const cover = document.querySelector("#cover");
 const songs = ["Darius - c'est difficile", "Intervals - Fable", "RQ - One Horn"];
 
 // Keep track of songs
-let songIndex = 0;
+let songIndex = 1;
 
 // Initially load song into DOM
 loadSong(songs[songIndex]);
